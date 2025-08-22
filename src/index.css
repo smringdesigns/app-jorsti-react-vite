@@ -1,0 +1,16 @@
+/* Establece el estilo global para el cuerpo del documento */
+body {
+  margin: 0; /* Elimina los márgenes predeterminados del cuerpo (deja que ocupe todo el espacio disponible) */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; 
+  /* Establece una pila de fuentes (de preferencia, se usa la fuente del sistema operativo) */
+  
+  -webkit-font-smoothing: antialiased; /* Mejora la apariencia de las fuentes en los navegadores Webkit (como Safari) */
+  -moz-osx-font-smoothing: grayscale; /* Mejora la apariencia de las fuentes en Firefox en macOS (reduce el sombreado de las fuentes) */
+}
+
+/* Establece el estilo para los elementos <code> */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; 
+  /* Define una pila de fuentes monoespaciadas (fuentes ideales para mostrar código) */
+}

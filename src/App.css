@@ -1,0 +1,45 @@
+/* Centra el texto en el contenedor de la clase .App */
+.App {
+  text-align: center;
+}
+
+/* Define el tamaño y comportamiento del logo */
+.App-logo {
+  height: 40vmin; /* El tamaño del logo será el 40% del valor de la unidad "vmin" (la menor entre el ancho y alto de la ventana del navegador) */
+  pointer-events: none; /* Desactiva cualquier interacción con el logo, como hacer clic o hover */
+}
+
+/* Aplica una animación al logo solo si el usuario no tiene preferencia por reducir la animación */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear; /* Aplica una animación de rotación infinita de 20 segundos de duración */
+  }
+}
+
+/* Estilos para el encabezado de la aplicación */
+.App-header {
+  background-color: #282c34; /* Color de fondo oscuro para el encabezado */
+  min-height: 100vh; /* Asegura que el encabezado ocupe al menos el 100% de la altura de la ventana */
+  display: flex; /* Usamos flexbox para alinear los elementos dentro del encabezado */
+  flex-direction: column; /* Los elementos dentro del encabezado se organizarán en una columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  font-size: calc(10px + 2vmin); /* Tamaño de la fuente que se ajusta según las dimensiones de la ventana */
+  color: white; /* Color del texto */
+}
+
+/* Estilo para los enlaces dentro de la aplicación */
+.App-link {
+  color: #61dafb; /* Establece el color azul claro para los enlaces */
+}
+
+/* Animación que hace girar el logo */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); /* Inicia la rotación desde 0 grados */
+  }
+  to {
+    transform: rotate(360deg); /* Finaliza la rotación en 360 grados, completando una vuelta */
+  }
+}
+/* Estilo global para el cuerpo del documento */
