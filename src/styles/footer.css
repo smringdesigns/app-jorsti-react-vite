@@ -1,0 +1,84 @@
+/* src/components/footer.css */
+
+.footer {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  padding: 40px 20px 20px;
+  font-family: sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 10px 20px;
+}
+
+.footer-logo {
+  width: 90px;         /* o el tamaño que prefieras */
+  margin-bottom: 6px;   /* reduce el espacio entre logo y texto */
+  display: block;
+}
+
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: var(--color-white);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: var(--color-primary);;
+}
+
+/* Animación para logo giratorio */
+@media (prefers-reduced-motion: no-preference) {
+  .footer-logo {
+    animation: app-logo-spin infinite 20s linear;
+  }
+}
+
+.social-icons a {
+  color: var(--color-primary);
+  margin-right: 10px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--color-white);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-medium);
+  margin: 30px 0 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  color:  var(--color-primary);
+}

@@ -1,16 +1,80 @@
+:root {
+  /* Colores base */
+  --color-dark: #13161c;
+  --color-darker: #1e2229;
+  --color-medium: #2d323a;
+  --color-muted: #555c68;
+  --color-light-muted: #87909d;
+  --color-light: #c4c8ce;
+  --color-background: #f9f9f9;
+
+  /* Colores de marca */
+  --color-primary: #00ffff;      /* Cian brillante */
+  --color-secundary: #0ae98a;    /* Aguamarina brillante */
+  --color-accent: #05a460;       /* Verde fuerte */
+  --color-highlight: #78f8ad;    /* Aguamarina suave */
+
+  /* Colores de alerta o acción */
+  --color-danger: #e53256;
+  --color-danger-dark: #8f283d;
+  --color-warning: #e26a63;
+  --color-critical: #cc2949;
+  --color-critical-dark: #b22440;
+
+  /* Colores neutros */
+  --color-black: #000;
+  --color-white: #ffffff;
+}
+
 /* Establece el estilo global para el cuerpo del documento */
 body {
-  margin: 0; /* Elimina los márgenes predeterminados del cuerpo (deja que ocupe todo el espacio disponible) */
+  margin: 0; /* Elimina los márgenes predeterminados */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; 
-  /* Establece una pila de fuentes (de preferencia, se usa la fuente del sistema operativo) */
-  
-  -webkit-font-smoothing: antialiased; /* Mejora la apariencia de las fuentes en los navegadores Webkit (como Safari) */
-  -moz-osx-font-smoothing: grayscale; /* Mejora la apariencia de las fuentes en Firefox en macOS (reduce el sombreado de las fuentes) */
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+  -webkit-font-smoothing: antialiased; /* Mejora fuentes en Webkit */
+  -moz-osx-font-smoothing: grayscale; /* Mejora fuentes en Firefox/macOS */
+
+  /* Fondo degradado moderno */
+  background: linear-gradient(
+    160deg,
+    var(--color-medium) 0%,
+    var(--color-primary) 100%
+  );
+  color: var(--color-white);
+  min-height: 100vh;
 }
 
 /* Establece el estilo para los elementos <code> */
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; 
-  /* Define una pila de fuentes monoespaciadas (fuentes ideales para mostrar código) */
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Contenedor global */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos de secciones centradas */
+.text-center {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 10px;
+}
+
+/* Títulos */
+.text-center h1 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  color: var(--color-white);
+}
+
+/* Párrafos */
+.text-center p {
+  font-size: 1.1rem;
+  color: var(--color-light);
+  line-height: 1.6;
 }

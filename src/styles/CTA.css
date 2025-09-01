@@ -1,0 +1,51 @@
+/* CTA container */
+.cta-container {
+  background: linear-gradient(
+    160deg,
+    var(--color-medium) 0%,
+    var(--color-primary) 100%
+  );
+  color: var(--color-white);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin: 3rem auto;
+  max-width: 900px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* ✅ Tipografía aquí */
+}
+
+/* Título CTA */
+.cta-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Texto CTA */
+.cta-container p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Botón CTA */
+.section-button {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  background: var(--color-white);
+  color: var(--color-primary);
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover botón */
+.section-button:hover {
+  background: var(--color-light);
+  transform: scale(1.05);
+}
+
+/* Palabra resaltada */
+.highlight {
+  color: var(--color-highlight);
+}

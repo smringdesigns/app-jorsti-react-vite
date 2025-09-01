@@ -3,8 +3,14 @@ import React from "react";
 // Array que contiene los elementos de navegación
 const navItems = [
   { name: "Inicio", link: "/" },
-  { name: "Acerca de", link: "/about" },
-  { name: "Contacto", link: "/contact" }
+  { name: "Servicios", link: "/services" },
+  { name: "Nosotros", link: "/about" },
+  { name: "Portafolio", link: "/portfolio" },
+  { name: "Procesos", link: "/process" },
+  { name: "Contacto", link: "/contact" },
+  { name: "Icetex", link: "/icetex" },
+  { name: "Blog", link: "/blog" },
+  { name: "Inicio Sesión", link: "/login" }
 ];
 
 

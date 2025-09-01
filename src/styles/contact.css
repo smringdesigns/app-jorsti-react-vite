@@ -1,0 +1,90 @@
+/* Contenedor principal que agrupa formulario + información */
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 50px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Formulario y bloque de información */
+.contact-form-container,
+.contact-info-container {
+  flex: 1 1 450px;
+  background-color: var(--color-medium); /* fondo oscuro */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--color-white);
+}
+
+/* Información de contacto */
+.contact-info-container h3 {
+  margin-bottom: 10px;
+  color: var(--color-primary);
+}
+
+.contact-info-container p {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: var(--color-light-muted);
+}
+
+/* Formulario */
+.contact-form {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid var(--color-light-muted);
+  border-radius: 5px;
+  font-size: 1rem;
+  resize: vertical;
+  background-color: var(--color-darker);
+  color: var(--color-white);
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  font-family: inherit;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background-color: var(--color-dark);
+}
+
+/* Botón */
+.contact-button {
+  background-color: var(--color-primary);
+  color: var(--color-light-muted);
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: var(--color-highlight);
+  color: var(--color-dark);
+  box-shadow: 0 0 12px var(--color-primary);
+}
+
