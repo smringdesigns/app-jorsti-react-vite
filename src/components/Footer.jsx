@@ -1,39 +1,45 @@
 // src/components/footer.jsx
 import React from "react";
+import { Link } from "react-router-dom"; // ✅ Importa Link
 import {
   FaFacebookF,
   FaXTwitter,
   FaLinkedinIn,
   FaInstagram
 } from "react-icons/fa6";
-import "../styles/footer.css"; // Importa el CSS separado
-import logo from "../assets/logo.png"; // Asegúrate de tener el logo en la ruta correcta
+import "../styles/footer.css";
+import logo from "../assets/logo.png";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
+        {/* Columna 1 */}
         <div className="footer-section">
-          {/* Columna 1 */}
-          <img src={logo} 
-          alt="JorSti Tech Logo" 
-          className="footer-logo" 
-          /> 
-          <p> Soluciones digitales accesibles y efectivas: 
+          <Link to="/">
+            <img 
+              src={logo} 
+              alt="JorSti Tech Logo" 
+              className="footer-logo" 
+              title="Volver al inicio"
+            />
+          </Link>
+          <p>
+            Soluciones digitales accesibles y efectivas: 
             desarrollo web, asesorías ICETEX, envíos y servicios 
-            financieros en un solo lugar. 
-          </p> 
+            financieros en un solo lugar.
+          </p>
         </div>
 
         {/* Columna 2 */}
         <div className="footer-section">
           <h4>Enlaces Rápidos</h4>
           <ul>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/Services">Servicios</a></li>
-            <li><a href="/process">Procesos</a></li>
-            <li><a href="/contact">Contacto</a></li>
-            <li><a href="/icetex">Icetex</a></li>
+            <li><Link to="/">Inicio</Link></li>
+            <li><Link to="/services">Servicios</Link></li>
+            <li><Link to="/process">Procesos</Link></li>
+            <li><Link to="/contact">Contacto</Link></li>
+            <li><Link to="/icetex">Icetex</Link></li>
           </ul>
         </div>
 
@@ -62,7 +68,9 @@ const Footer = () => {
       </div>
 
       <hr />
-      <p className="footer-bottom">© 2025 Inversiones JorSti Tech. Todos los derechos reservados.</p>
+      <p className="footer-bottom">
+        © 2025 Inversiones JorSti Tech. Todos los derechos reservados.
+      </p>
     </footer>
   );
 };
