@@ -3,10 +3,11 @@
   max-width: 900px;
   margin: 2rem auto;
   padding: 2rem;
-  background: var(--color-medium);
+  background: var(--color-medium); /* gris grafito */
   border-radius: 12px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: auto;
 }
 
 /* Cabecera de la empresa */
@@ -14,27 +15,28 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
   margin-bottom: 2rem;
   border-bottom: 2px solid var(--color-light-muted);
   padding-bottom: 1rem;
 }
 
 .empresa-logo {
-  width: 80px; /* Logo pequeño */
+  width: 70px;
   height: auto;
-  margin-right: 1rem;
 }
 
 .empresa-header h2 {
   margin: 0;
   font-size: 1.5rem;
-  color: var(--color-white);
+  color: var(--color-secondary); /* azul corporativo */
 }
 
 .empresa-header p {
   margin: 2px 0;
   font-size: 0.9rem;
-  color: var(--color-white);
+  color: var(--color-light-muted);
 }
 
 /* Cabecera del documento */
@@ -42,7 +44,9 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  border-bottom: 2px solid var(--color-primary);
+  flex-wrap: wrap;
+  gap: 10px;
+  border-bottom: 2px solid var(--color-secondary);
   padding-bottom: 1rem;
   margin-bottom: 2rem;
 }
@@ -50,7 +54,7 @@
 .documento-header h1 {
   font-size: 1.8rem;
   font-weight: bold;
-  color: var(--color-dark);
+  color: var(--color-accent); /* Cian brillante para resaltar */
 }
 
 /* Tabla */
@@ -58,23 +62,28 @@
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 2rem;
+  display: block;
+  overflow-x: auto;
 }
 
 .documento-table th,
 .documento-table td {
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-light-muted);
   padding: 0.8rem;
   text-align: center;
+  font-size: 0.95rem;
+  white-space: nowrap;
 }
 
 .documento-table th {
-  background: var(--color-light-muted);
+  background: var(--color-secondary);
   color: var(--color-white);
 }
 
 .documento-total {
   font-weight: bold;
-  background: var(--color-light-muted);
+  background: var(--color-blue-dark); /* azul oscuro */
+  color: var(--color-white);
   text-align: right;
 }
 
@@ -86,7 +95,7 @@
 
 .documento-actions button {
   padding: 0.8rem 1.5rem;
-  background: var(--color-light);
+  background: var(--color-secondary);
   color: var(--color-white);
   border: none;
   border-radius: 6px;
@@ -96,27 +105,53 @@
 }
 
 .documento-actions button:hover {
-  background: var(--color-primary);
+  background: var(--color-accent);
   color: var(--color-dark);
   transform: scale(1.05);
 }
 
 /* Variantes por tipo */
 .factura-header h1 {
-  color: var(--color-primary);
+  color: var(--color-secondary);
 }
 .cotizacion-header h1 {
-  color: var(--color-primary);
+  color: var(--color-cyan);
 }
 .cuenta-cobro-header h1 {
   color: var(--color-danger);
 }
 
-/* Solo imprimir la factura */
+/* Responsive */
+@media (max-width: 768px) {
+  .documento-container {
+    padding: 1rem;
+  }
+
+  .empresa-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .documento-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .documento-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .documento-table {
+    font-size: 0.85rem;
+  }
+}
+
+/* Impresión */
 @media print {
   @page {
-    size: A4 portrait;   /* Formato A4 vertical */
-    margin: 15mm;        /* Márgenes seguros de impresión */
+    size: A4 portrait;
+    margin: 15mm;
   }
 
   body * {
@@ -137,15 +172,14 @@
     margin: 0;
     padding: 1rem;
     border-radius: 0;
-    background: white; /* Fondo limpio */
+    background: white;
   }
 
   .no-print {
-    display: none !important; /* Inputs y botones fuera de la impresión */
+    display: none !important;
   }
 
   .documento-table {
-    font-size: 12pt; 
-    width: 100%;
+    font-size: 11pt;
   }
 }

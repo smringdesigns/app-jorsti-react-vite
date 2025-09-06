@@ -1,12 +1,13 @@
-/* src/components/footer.css */
-
+/* Footer principal */
 .footer {
-  background-color: var(--color-dark);
+  background-color: var(--color-darker); /* Fondo gris carbón */
   color: var(--color-white);
   padding: 40px 20px 20px;
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.4);
 }
 
+/* Contenedor del footer */
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -15,24 +16,32 @@
   justify-content: space-between;
 }
 
+/* Secciones */
 .footer-section {
-  flex: 1 1 200px;
-  margin: 10px 20px;
+  flex: 1 1 220px;
+  margin: 15px 20px;
 }
 
 .footer-logo {
-  width: 90px;         /* o el tamaño que prefieras */
-  margin-bottom: 6px;   /* reduce el espacio entre logo y texto */
+  width: 90px;
+  margin-bottom: 8px;
   display: block;
+  transition: transform 0.3s ease;
 }
 
+.footer-logo:hover {
+  transform: scale(1.05);
+}
 
 .footer-section h3,
 .footer-section h4 {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--color-accent); /* Cian brillante para títulos */
 }
 
+/* Listas */
 .footer-section ul {
   list-style: none;
   padding: 0;
@@ -44,41 +53,39 @@
 }
 
 .footer-section ul li a {
-  color: var(--color-white);
+  color: var(--color-light);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-  color: var(--color-primary);;
+  color: var(--color-secondary); /* Azul corporativo al hover */
 }
 
-/* Animación para logo giratorio */
-@media (prefers-reduced-motion: no-preference) {
-  .footer-logo {
-    animation: app-logo-spin infinite 20s linear;
-  }
-}
-
+/* Social Icons */
 .social-icons a {
-  color: var(--color-primary);
-  margin-right: 10px;
-  font-size: 18px;
-  transition: color 0.3s ease;
+  color: var(--color-primary); /* Azul oscuro por defecto */
+  margin-right: 12px;
+  font-size: 20px;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .social-icons a:hover {
-  color: var(--color-white);
+  color: var(--color-accent); /* Cian en hover */
+  transform: scale(1.2);
 }
 
+/* Separador */
 hr {
   border: none;
   border-top: 1px solid var(--color-medium);
   margin: 30px 0 10px;
 }
 
+/* Footer bottom */
 .footer-bottom {
   text-align: center;
-  font-size: 14px;
-  color:  var(--color-primary);
+  font-size: 0.9rem;
+  color: var(--color-light-muted);
+  margin-top: 10px;
 }
