@@ -12,26 +12,26 @@
   padding: 25px 20px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease, transform 0.3s ease, background 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, background 0.3s ease, color 0.3s ease;
   text-align: left;
-  color: var(--color-white); /* Texto blanco */
+  color: var(--color-white); /* Texto blanco por defecto */
 }
 
 .value-box:hover {
-  box-shadow: 0 6px 16px var(--color-primary);
-  transform: translateY(-4px);
+  box-shadow: 0 6px 16px var(--color-secondary);
+  transform: translateY(-6px);
   background: linear-gradient(
     135deg,
     var(--color-primary) 0%,
-    var(--color-secundary) 50%,
+    var(--color-secondary) 50%,
     var(--color-accent) 100%
   );
-  color: var(--color-dark); /* Invertir texto si fondo es claro */
+  color: var(--color-dark); /* Texto oscuro cuando fondo es brillante */
 }
 
-/* Botón estilo limpio y atractivo */
+/* Botón estilo moderno */
 .section-button {
-  background-color: var(--color-medium);
+  background-color: var(--color-secondary);
   color: var(--color-white);
   border: none;
   padding: 12px 24px;
@@ -42,11 +42,12 @@
   text-decoration: none;
   margin-top: 30px;
   display: inline-block;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 .section-button:hover {
-  background-color: var(--color-primary);
+  background-color: var(--color-accent);
   color: var(--color-dark);
-  box-shadow: 0 0 12px var(--color-primary);
+  box-shadow: 0 0 15px var(--color-accent);
+  transform: scale(1.05);
 }
